@@ -1,0 +1,18 @@
+<app-toolbar (isShowSidebar)="sidenav.toggle($event)" [isMenuOpened]="isShowSidebar"></app-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav
+    [class.mat-elevation-z4]="true"
+    [attr.role]="(isShowSidebar) ? 'dialog' : 'navigation'"
+    [mode]="(isShowSidebar ) ? 'over' : 'side'"
+    [opened]="(isShowSidebar)=== false">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="layout-content">
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

@@ -6,6 +6,7 @@ import { BaseComponent } from './base/base.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from '../shared/material/material.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     RouterModule,
+    MaterialModule,
     FormsModule,
   ],
 })
