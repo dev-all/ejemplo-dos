@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+
+import { Router, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { ThemePalette } from '@angular/material/core';
 @Component({
   selector: 'app-base',
   templateUrl: './base.component.html',
@@ -22,7 +25,23 @@ export class BaseComponent implements OnInit {
     ['(orientation: portrait)', 'Portrait'],
     ['(orientation: landscape)', 'Landscape'],
   ]);
-  constructor(private breakpointObserver: BreakpointObserver) {
+
+  isLoading: boolean = true;
+  color: ThemePalette = 'accent';
+  constructor(private breakpointObserver: BreakpointObserver,private router: Router) {
+
+    /// Spinner for lazyload modules
+    router.events.forEach((event) => {
+
+      if (event instanceof RouteConfigLoadStart) {
+        this.isLoading = true;
+
+      } else if (event instanceof RouteConfigLoadEnd) {
+        this.isLoading = false;
+
+      }
+    });
+
 
     breakpointObserver
         .observe([
@@ -51,9 +70,21 @@ export class BaseComponent implements OnInit {
           }
         });
 
+
+
+
+
   }
 
     ngOnInit(): void {
+
+       // solo se visualiza cuando se recarga la pagina base
+    // por ende no es para todos los view
+    setTimeout(() => {
+      this.isLoading = false;
+      }, 1000);
+
+
       this.breakpointObserver
       .observe([
                 Breakpoints.XSmall, //0-600

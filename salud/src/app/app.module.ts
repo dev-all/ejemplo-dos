@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+
 import { ErrorPageComponent } from './modules/error-page/error-page.component';
-import { LayoutModule } from '@angular/cdk/layout';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [

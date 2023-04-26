@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ToolbarComponent implements OnInit {
   @Input() isMenuOpened!: boolean;
   @Output() isShowSidebar = new EventEmitter<boolean>();
-  title = 'MAGNUM';
+  title = 'Salud';
   constructor() { }
 
   ngOnInit(): void {

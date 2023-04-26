@@ -10,7 +10,15 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="layout-content">
-    <ng-content></ng-content>
+     <!-- Spinner for lazyload modules -->
+     <div *ngIf="isLoading" class="">
+      <mat-progress-bar mode="indeterminate" [color]="color"></mat-progress-bar>
+    </div>
+
+    <div dir-content-animate *ngIf="!isLoading">
+      <router-outlet></router-outlet>
+    </div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
 

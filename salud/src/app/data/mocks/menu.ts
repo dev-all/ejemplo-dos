@@ -1,4 +1,4 @@
-import { MenuItem } from '@data/interfaces/ui/menu.model';
+import { MenuItem } from "../interfaces/ui/menu.model";
 
 export const MENU: MenuItem[] = [
   {
