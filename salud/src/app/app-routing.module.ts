@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './modules/error-page/error-page.component';
-import { BaseComponent } from './layout/base/base.component';
+import { LayoutComponent } from './layout/layout/layout.component';
 
 
 const routes: Routes = [
 
-
+  {
+    path: 'login',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  },
 
   {
     path: '',
-    component: BaseComponent,
+    component: LayoutComponent,
    // canActivate: [AuthGuard],
     children: [
       {
