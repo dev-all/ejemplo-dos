@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  public LinkHome: string = 'https://gestionmagnum.com/en/home/';
+  public LinkGallery: string = 'https://gestionmagnum.com/en/gallery/';
 
   constructor() { }
 

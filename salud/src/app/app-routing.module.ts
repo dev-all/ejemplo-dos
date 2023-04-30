@@ -1,25 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './modules/error-page/error-page.component';
+import { LayoutComponent } from './layout/layout/layout.component';
+
 
 const routes: Routes = [
+
   {
-    path: '',
-    redirectTo: "login",
-    pathMatch:'full'
+    path: 'login',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
+
   {
     path: '',
-    component: BaseComponent,
-    //canActivate: [AuthGuard],
+    component: LayoutComponent,
+   // canActivate: [AuthGuard],
     children: [
       {
         path: 'general',
-        loadChildren: () => import('@modules/general/general.module').then(m => m.GeneralModule)
-      }
-
+        loadChildren: () => import('./modules/general/general.module').then(m => m.GeneralModule)
+      },
     ]
   },
+
   {
     path: 'error',
     component: ErrorPageComponent
@@ -36,9 +39,8 @@ const routes: Routes = [
   },
   { path: '**', redirectTo: 'error', pathMatch: 'full' }
 ];
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

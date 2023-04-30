@@ -1,1 +1,21 @@
-<p>sidenav works!</p>
+<mat-nav-list class="mat-nav-magnum">
+  <ng-container *ngFor="let item of menuItems">
+    <div *ngIf="item.isTitle">
+      <mat-list-item class="icon" routerLink="item.link">
+        <mat-icon>{{item.icon}}</mat-icon> <span>{{ item.label }}</span>
+      </mat-list-item>
+    </div>
+      <mat-expansion-panel [class.mat-elevation-z0]="true" *ngIf="!item.isTitle">
+        <mat-expansion-panel-header  *ngIf="hasItems(item)">
+          {{ item.label }}
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <div *ngFor="let subitem of item.subItems">
+            <a mat-list-item [routerLink]="subitem.link" *ngIf="!hasItems(subitem)" routerLinkActive="['is-active']">
+                <mat-icon >{{subitem.icon}}</mat-icon><span> {{ subitem.label }}</span>
+            </a>
+          </div>
+        </mat-nav-list>
+      </mat-expansion-panel>
+  </ng-container>
+</mat-nav-list>
