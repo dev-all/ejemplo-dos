@@ -1,18 +1,16 @@
 import { MenuItem } from "../interfaces/ui/menu.model";
 
 export const MENU: MenuItem[] = [
-  {
-    label: '',
-    isTitle: true
-  },
+
   {
     label: 'Dashboard',
     icon: 'home',
-    link: '/dashboard'
+    link: '/dashboard',
+    isTitle: true
   },
   {
     label: 'Angular',
-    icon: 'hexagon',
+    icon: 'people',
     subItems: [
       {
         label: 'Pipes',
@@ -83,130 +81,8 @@ export const MENU: MenuItem[] = [
       },
     ]
   },
-  {
-    label: 'Chat',
-    icon: 'message-square',
-    link: '/apps/chat',
-  },
-  {
-    label: 'Calendar',
-    icon: 'calendar',
-    link: '/apps/calendar',
-    badge: {
-      variant: 'primary',
-      text: 'Event',
-    }
-  },
-  {
-    label: 'Components',
-    isTitle: true
-  },
-  {
-    label: 'UI Kit',
-    icon: 'feather',
-    subItems: [
-      {
-        label: 'Accordion',
-        link: '/ui-components/accordion',
-      },
-      {
-        label: 'Alerts',
-        link: '/ui-components/alerts',
-      },
-      {
-        label: 'Badges',
-        link: '/ui-components/badges',
-      },
-      {
-        label: 'Breadcrumbs',
-        link: '/ui-components/breadcrumbs',
-      },
-      {
-        label: 'Buttons',
-        link: '/ui-components/buttons',
-      },
-      {
-        label: 'Button group',
-        link: '/ui-components/button-group',
-      },
-      {
-        label: 'Cards',
-        link: '/ui-components/cards',
-      },
-      {
-        label: 'Carousel',
-        link: '/ui-components/carousel',
-      },
-      {
-        label: 'Collapse',
-        link: '/ui-components/collapse',
-      },
-      {
-        label: 'Datepicker',
-        link: '/ui-components/datepicker',
-      },
-      {
-        label: 'Dropdowns',
-        link: '/ui-components/dropdowns',
-      },
-      {
-        label: 'List group',
-        link: '/ui-components/list-group',
-      },
-      {
-        label: 'Media object',
-        link: '/ui-components/media-object',
-      },
-      {
-        label: 'Modal',
-        link: '/ui-components/modal',
-      },
-      {
-        label: 'Navs',
-        link: '/ui-components/navs',
-      },
-      {
-        label: 'Navbar',
-        link: '/ui-components/navbar',
-      },
-      {
-        label: 'Pagination',
-        link: '/ui-components/pagination',
-      },
-      {
-        label: 'Popovers',
-        link: '/ui-components/popovers',
-      },
-      {
-        label: 'Progress',
-        link: '/ui-components/progress',
-      },
-      {
-        label: 'Rating',
-        link: '/ui-components/rating',
-      },
-      {
-        label: 'Scrollbar',
-        link: '/ui-components/scrollbar',
-      },
-      {
-        label: 'Spinners',
-        link: '/ui-components/spinners',
-      },
-      {
-        label: 'Timepicker',
-        link: '/ui-components/timepicker',
-      },
-      {
-        label: 'Tooltips',
-        link: '/ui-components/tooltips',
-      },
-      {
-        label: 'Typeadhed',
-        link: '/ui-components/typeahead',
-      },
-    ]
-  },
+
+
   {
     label: 'Advanced UI',
     icon: 'anchor',

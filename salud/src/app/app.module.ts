@@ -8,6 +8,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { ErrorPageComponent } from './modules/error-page/error-page.component';
 import { LayoutModule } from './layout/layout.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { LayoutModule } from './layout/layout.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [{
     provide:[ LocationStrategy,

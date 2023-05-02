@@ -25,6 +25,14 @@ import { SidenavComponent } from './sidenav/sidenav.component';
         MaterialModule,
         FormsModule,
         HeaderModule,
+    ],
+    exports: [
+      HeaderModule,
+      SidenavComponent,
+      FooterComponent,
+      SettingsMenuComponent,
+      DateMenuComponent,
+      LayoutComponent
     ]
 })
 export class LayoutModule { }

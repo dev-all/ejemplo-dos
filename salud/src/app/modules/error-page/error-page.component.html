@@ -1,22 +1,19 @@
-<div class="main-wrapper">
-  <div class="page-wrapper full-page">
-    <div class="page-content d-flex align-items-center justify-content-center">
-
-      <div class="row w-100 mx-0 auth-page">
-        <div class="col-md-8 col-xl-6 mx-auto d-flex flex-column align-items-center">
-          <img src="assets/images/others/404.svg" class="img-fluid mb-2" alt="404">
-
-          <h1 class="fw-bolder mb-22 mt-2 tx-80 text-muted">{{type}}</h1>
-
-          <h4 class="mb-2">{{title}}</h4>
-
-          <h6 class="text-muted mb-3 text-center" [innerHTML]="desc"></h6>
-
-          <a routerLink="" class="btn btn-primary">Back to home</a>
-          
+<div class="not-found-page">
+    <div class="not-found-page__content">
+        <div class="not-found-page__title">
+            <img class="not-found-page__title-img" src="./assets/hot-found/logo.svg" alt="logo">
+            <h3 class="not-found-page__title-text">Angular</h3>
         </div>
-      </div>
+        <mat-card class="not-found-page__card">
+            <mat-card-content class="not-found-page__content">
+                <h1 class="not-found-page__card-title">{{type}}</h1>
 
+                <p class="not-found-page__card-sub-title">{{title}}</p>
+                <p class="not-found-page__card-sub-title-second">{{desc}}</p>
+
+                <button class="not-found-page__card-button" mat-raised-button color="primary">Back to Home</button>
+
+            </mat-card-content>
+        </mat-card>
     </div>
-  </div>
 </div>

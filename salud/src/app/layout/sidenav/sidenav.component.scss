@@ -1,24 +1,70 @@
-@import "src/app/styles/variables";
-@import "src/app/styles/colors";
-.mat-nav-magnum{
-  max-width: 250px;
-}
-// .icon span{
-//   margin: 10px;
-// }
-// button span{
-//   margin: 10px;
-// }
-
-// a span{
-//   margin: 10px;
-// }
-// .mat-expansion-panel {
-//  background: none;
-// }
-// .mat-expansion-panel-body {
-//   padding: 0 6px 5px;
-// }
-// .mat-list-base .mat-list-item {
-//   font-size: 13px;
-// }
+    @import "src/app/styles/colors";
+    @import "src/app/styles/font";
+    @import "src/app/styles/variables";
+    .mat-list-base {
+        border-bottom: 1px solid $gray-80;
+        width: $sidebar-width;
+        padding-bottom: 10px;
+        & .mat-list-item {
+            display: flex;
+            cursor: pointer;
+            color: $sidebar-font-color;
+            font-size: $fs-small;
+            width: auto;
+            padding-left: 4px;
+            &.active {
+                color: $sidebar-font-color-active;
+                background-color: $sidebar-background-color-active;
+                outline: none;
+                & .circle {
+                    background-color: $sidebar-icon-color-active;
+                }
+            }
+            &:hover {
+                background-color: $sidebar-background-color-hover;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    
+    .sidebar-title {
+        color: $sidebar-title-color;
+        font-size: $fs-small;
+        //text-transform: uppercase;
+        height: 40px;
+    }
+    
+    .mat-expansion-panel-header.mat-expanded {
+        height: 40px;
+    }
+    
+    .mat-list-base .mat-list-item.ui-element {
+        padding-left: 40px;
+    }
+    
+    .circle {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $sidebar-circle-color;
+        margin-right: 30px;
+    }
+    
+    .project-circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-left: 8px;
+        &_yellow {
+            background-color: $yellow;
+        }
+        &_blue {
+            background-color: $blue;
+        }
+        &_pink {
+            background-color: $pink;
+        }
+    }

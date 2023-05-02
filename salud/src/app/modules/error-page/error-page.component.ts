@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ErrorPageComponent implements OnInit, OnDestroy {
 
-  type: any;
+  type!: string;
   title: any;
   desc: any;
   private sub!: Subscription;
@@ -17,9 +17,10 @@ export class ErrorPageComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.type = this.route.snapshot.paramMap.get('type');
+    debugger;
+    this.type = this.route.snapshot.data['type'];
     console.log(this.type);
-    
+
     this.sub = this.route.data.subscribe( param => {
       if(param['type']) {
         this.type = param['type'];

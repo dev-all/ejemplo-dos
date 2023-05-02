@@ -16,24 +16,42 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatDividerModule } from '@angular/material/divider';
+
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+
 const MaterialComponent =[
+    MatProgressBarModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatDividerModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatOptionModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatMenuModule,
-    MatIconModule,
     MatListModule,
     MatExpansionModule,
-    MatCardModule,
     MatInputModule,
     MatFormFieldModule,
     MatGridListModule,
     MatSnackBarModule,
     MatSelectModule,
     MatTableModule,
-    MatCheckboxModule,
-    MatPaginatorModule,
-    MatProgressBarModule
+    MatNativeDateModule,
+    MatSlideToggleModule,
+    MatBadgeModule
   ];
 
 

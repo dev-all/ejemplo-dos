@@ -1,19 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatBadgeModule } from '@angular/material/badge';
-
-
 import { UserComponent, EmailComponent } from './components';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { SearchComponent } from './components/search/search.component';
 import { ShortNamePipe } from './pipes';
 import { HeaderComponent } from './containers';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -28,14 +20,8 @@ import { HeaderComponent } from './containers';
     HeaderComponent
   ],
   imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatInputModule,
-    MatBadgeModule
+   CommonModule,
+   MaterialModule
   ]
 })
 export class HeaderModule { }
