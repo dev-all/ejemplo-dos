@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { Email, User } from 'src/app/modules/auth/models';
 
 
 

@@ -10,6 +10,8 @@ import { ErrorPageComponent } from './modules/error-page/error-page.component';
 import { LayoutModule } from './layout/layout.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { AuthModule } from './modules/auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    AuthModule,
+    HttpClientModule,
     MatCardModule,
     MatButtonModule
   ],

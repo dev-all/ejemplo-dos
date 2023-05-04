@@ -57,7 +57,7 @@ export class ErrorPageComponent implements OnInit, OnDestroy {
           this.title = 'Something went wrong';
         }
         if (!this.desc) {
-          this.desc = 'Looks like something went wrong.<br>' + 'We\'re working on it';
+          this.desc = 'Looks like something went wrong. We\'re working on it';
         }
     }
   }

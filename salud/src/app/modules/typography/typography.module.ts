@@ -6,11 +6,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TypographyPageComponent } from './containers';
 import { TypographyRoutingModule } from './typography-routing.module';
 import { SharedModule } from '../../shared/shared.module';
-import { MaterialModule } from 'src/app/shared/material/material.module';
-import { LayoutModule } from 'src/app/layout/layout.module';
+import { TypographyComponent } from './typography.component';
 
 @NgModule({
-  declarations: [TypographyPageComponent],
+  declarations: [TypographyComponent,TypographyPageComponent,],
   imports: [
     CommonModule,
     TypographyRoutingModule,

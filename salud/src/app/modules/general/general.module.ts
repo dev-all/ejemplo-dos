@@ -35,7 +35,6 @@ const routes: Routes = [
     SharedModule,
     CommonModule,
     RouterModule.forChild(routes)
-
   ]
 })
 export class GeneralModule { }

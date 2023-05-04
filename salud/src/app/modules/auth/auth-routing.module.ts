@@ -1,12 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { INTERNAL_PATHS } from 'src/app/data/consts/routes/internal.routes';
 
-import { AuthPageComponent } from './containers';
 
 const routes: Routes = [
   {
-    path: '',
-    component: AuthPageComponent
+    path: INTERNAL_PATHS.AUTH_LOGIN,
+    component: LoginComponent,
   }
 ];
 
