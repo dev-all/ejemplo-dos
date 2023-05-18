@@ -9,7 +9,7 @@ import { catchError, EMPTY, finalize } from 'rxjs';
 import { AuthService } from '../auth.service';
 import { LoginCredentials } from '../model';
 import { Router } from '@angular/router';
-import { INTERNAL_ROUTES } from 'src/app/data/consts/routes/internal.routes';
+import { INTERNAL_ROUTES } from '@data/consts/routes/internal.routes';
 
 
 @Component({

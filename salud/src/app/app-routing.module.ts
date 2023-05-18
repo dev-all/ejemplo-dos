@@ -4,18 +4,17 @@ import { ErrorPageComponent } from './modules/error-page/error-page.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { INTERNAL_ROUTES } from './data/consts/routes/internal.routes';
 
-debugger;
 const routes: Routes = [
 
-  {
-    path: '',
-    redirectTo: INTERNAL_ROUTES.AUTH_LOGIN,
-    pathMatch:'full'
-  },
-  {
-    path:'auth',
-    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
-  },
+  // {
+  //   path: '',
+  //   redirectTo: INTERNAL_ROUTES.AUTH_LOGIN,
+  //   pathMatch:'full'
+  // },
+  // {
+  //   path:'auth',
+  //   loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  // },
 
   {
     path: '',

@@ -4,6 +4,8 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 
 import { Employee } from '../../models/employee';
+import { Subscription } from 'rxjs';
+import { TablesService } from '../../services';
 
 @Component({
   selector: 'app-employee-table',
@@ -11,7 +13,8 @@ import { Employee } from '../../models/employee';
   styleUrls: ['./employee-table.component.scss']
 })
 export class EmployeeTableComponent implements OnInit {
-  @Input() employeeTableData!: Employee[];
+  employeeTableData: Employee[]=[];
+  empleyeeSubscription!: Subscription;
   public displayedColumns: string[] = ['select', 'name', 'company', 'city', 'state'];
   public dataSource!: MatTableDataSource<Employee>;
   public selection = new SelectionModel<Employee>(true, []);
@@ -20,9 +23,16 @@ export class EmployeeTableComponent implements OnInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator!: MatPaginator;
 
-  public ngOnInit(): void {
-    this.dataSource = new MatTableDataSource<Employee>(this.employeeTableData);
+  constructor(private service: TablesService) {  }
 
+  public ngOnInit(): void {
+
+      // aqui se subscribe al servicio que es quien comparte el rultado
+      this.empleyeeSubscription =  this.service.loadEmployeeTableData().subscribe((result: any) => {
+        //console.log('estoy en result-anime-componet', result);
+        this.employeeTableData = result;
+      });
+    this.dataSource = new MatTableDataSource<Employee>(this.employeeTableData);
     this.dataSource.paginator = this.paginator;
   }
 

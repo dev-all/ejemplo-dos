@@ -6,9 +6,9 @@ import { LoginCredentials} from './model';
 import { User, UserWithToken } from './model/user.interface';
 import { IApiUserAuthenticated } from './model/iapi-auth-user.metadata';
 import { JwtHelperService} from '@auth0/angular-jwt';
-import { API_ROUTES } from 'src/app/data/consts/routes/api.routes';
+import { API_ROUTES } from '@data/consts/routes/api.routes';
 import { Response } from './model/response';
-import { INTERNAL_ROUTES } from 'src/app/data/consts/routes/internal.routes';
+import { INTERNAL_ROUTES } from '@data/consts/routes/internal.routes';
 const USER_LOCAL_STORAGE_KEY = 'userData';
 
 @Injectable({
@@ -51,7 +51,7 @@ export class AuthService {
     return this.httpClient.post<Response>(API_ROUTES.AUTH.SIGNIN, credentials)
   }
 
-  
+
 //------------------
   login(credentials: LoginCredentials): Observable<never> {
     return this.httpClient.post<string>('login', credentials).pipe(

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Email } from 'src/app/modules/auth/model';
+import { Email } from '@modules/auth/model';
 
 @Component({
   selector: 'app-email',

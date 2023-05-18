@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'src/app/data/interfaces/ui/menu.model';
-import { MENU } from 'src/app/data/mocks/menu';
+import { MenuItem } from '@data/interfaces/ui/menu.model';
+import { MENU } from '@data/mocks/menu';
 
 @Component({
   selector: 'app-sidenav',

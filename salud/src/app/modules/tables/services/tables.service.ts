@@ -7,7 +7,6 @@ import {Customer, Employee} from '../models';
   providedIn: 'root'
 })
 export class TablesService {
-  
   public loadEmployeeTableData(): Observable<Employee[]> {
     return of([
       {name: 'Joe James', company: 'Example Inc.', city: 'Yonkers', state: 'NY'},

@@ -5,7 +5,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { SearchComponent } from './components/search/search.component';
 import { ShortNamePipe } from './pipes';
 import { HeaderComponent } from './containers';
-import { MaterialModule } from 'src/app/shared/material/material.module';
+import { MaterialModule } from '@shared/material/material.module';
 
 @NgModule({
   declarations: [

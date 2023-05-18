@@ -1,5 +1,5 @@
 
-import { environment as ENV} from 'src/environments/environment.prod';
+import { environment as ENV} from '@env/environment.prod';
 export const API_ROUTES = {
   AUTH:{
     SIGNUP: `${ENV.uri}account/sign-up`,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 import { GeneralComponent } from './general.component';
 import { BlankComponent } from './blank/blank.component';
 import { LayoutModule } from '@angular/cdk/layout';

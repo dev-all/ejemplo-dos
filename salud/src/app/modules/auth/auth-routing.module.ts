@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login/login.component';
-import { INTERNAL_PATHS } from 'src/app/data/consts/routes/internal.routes';
+import { INTERNAL_PATHS } from '@data/consts/routes/internal.routes';
 
 
 const routes: Routes = [
